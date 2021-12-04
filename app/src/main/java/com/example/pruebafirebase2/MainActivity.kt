@@ -37,17 +37,22 @@ class MainActivity : AppCompatActivity() {
         auth = Firebase.auth
 
 
+        //Hacemos la llamada para el metodo de crear cuenta
         registrar.setOnClickListener {
             createAccount(email.text.toString(), password.text.toString())
         }
 
 
-
+        //Hacemos la llamada para el metodo de iniciar sesión
         iniciar.setOnClickListener {
             signIn(email.text.toString(), password.text.toString())
         }
 
     }
+
+    /**
+     * Método que sirve para crear una cuenta a través de un email y contraseña
+     */
 
     private fun createAccount(email: String, password: String) {
 
